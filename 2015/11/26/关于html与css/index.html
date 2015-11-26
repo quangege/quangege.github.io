@@ -5,37 +5,34 @@
   
   <title>关于html与css | 小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##复习一下之前学的html与css
-1.html的基本格式
+  <meta name="description" content="复习一下之前学的html与css1.html的基本格式
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
     &amp;lt;head&amp;gt;
         &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;
         &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;tex">
+        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于html与css">
 <meta property="og:url" content="http://yoursite.com/2015/11/26/关于html与css/index.html">
 <meta property="og:site_name" content="小世界">
-<meta property="og:description" content="##复习一下之前学的html与css
-1.html的基本格式
+<meta property="og:description" content="复习一下之前学的html与css1.html的基本格式
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
     &amp;lt;head&amp;gt;
         &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;
         &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;tex">
-<meta property="og:updated_time" content="2015-11-26T02:09:19.000Z">
+        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/c">
+<meta property="og:updated_time" content="2015-11-26T03:37:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于html与css">
-<meta name="twitter:description" content="##复习一下之前学的html与css
-1.html的基本格式
+<meta name="twitter:description" content="复习一下之前学的html与css1.html的基本格式
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
     &amp;lt;head&amp;gt;
         &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;
         &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;tex">
+        &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/c">
   
     <link rel="alternative" href="/atom.xml" title="小世界" type="application/atom+xml">
   
@@ -249,8 +246,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##复习一下之前学的html与css</p>
-<p><strong>1.html的基本格式</strong></p>
+        <h2 id="复习一下之前学的html与css">复习一下之前学的html与css</h2><p><strong>1.html的基本格式</strong></p>
 <pre><code><span class="doctype">&lt;!doctype html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
     <span class="tag">&lt;<span class="title">head</span>&gt;</span>
@@ -279,7 +275,13 @@
 <pre><code>1.<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">标签引入：在&lt;/<span class="tag">head</span>&gt;上面添加&lt;<span class="tag">style</span>&gt;.....</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
 2.标签内部引入方式（行间样式）<span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"...."</span>&gt;</span>....<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 3.外部引用：<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">""</span>/&gt;</span>
-</code></pre><p>&gt;</p>
+</code></pre><blockquote>
+<p><em>对position的认识</em></p>
+<p>position有三种类型：</p>
+<p><strong>relative</strong> 相对定位：对标签没有属性改变。设置left,right,top,bottom方向可以偏移位置。有z-index来提高级别，默认后面标签元素覆盖前面元素。</p>
+<p><strong>absolute</strong> 绝对定位：对标签有属性改变。float无效，有清除浮动的效果。内容撑开宽度，高度。有z-index层级样式。margin:0 auto；无效。默认后面标签元素覆盖前面元素。以父级标签设置relative或者absolute属性后为方向起点。没有父级设置，以body左上角为方向起点。</p>
+<p><strong>fixed</strong> 固定定位：和绝对定位相似，也改变元素属性。方向固定后，以浏览器窗口为起点定位，不会因为页面滚动而改变位置。</p>
+</blockquote>
 
       
     </div>
