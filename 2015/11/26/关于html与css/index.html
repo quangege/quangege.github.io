@@ -23,7 +23,7 @@
         &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;
         &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
         &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/c">
-<meta property="og:updated_time" content="2015-11-26T03:53:53.000Z">
+<meta property="og:updated_time" content="2015-11-26T07:52:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于html与css">
 <meta name="twitter:description" content="复习一下之前学的html与css1.html的基本格式
@@ -269,18 +269,24 @@
 </blockquote>
 <p><strong>3.css</strong></p>
 <blockquote>
-<p><em>css选择器</em>：通配选择器，标签选择器，类选择器，id选择器，层级选择器，群组选择器。</p>
-<p><em>css的三种引用方式</em></p>
+<p>（1）<em>css选择器</em>：通配选择器，标签选择器，类选择器，id选择器，层级选择器，群组选择器。</p>
+<p>（2）<em>css的三种引用方式</em></p>
 </blockquote>
 <pre><code>1.<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">标签引入：在&lt;/<span class="tag">head</span>&gt;上面添加&lt;<span class="tag">style</span>&gt;.....</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
 2.标签内部引入方式（行间样式）<span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"...."</span>&gt;</span>....<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 3.外部引用：<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">""</span>/&gt;</span>
 </code></pre><blockquote>
-<p><em>对position的认识</em></p>
+<p>（3）<em>对position的认识</em></p>
 <p>position有三种类型：</p>
 <p><strong>relative</strong> 相对定位：对标签没有属性改变。设置left,right,top,bottom方向可以偏移位置。有z-index来提高级别，默认后面标签元素覆盖前面元素。</p>
 <p><strong>absolute</strong> 绝对定位：对标签有属性改变。float无效，有清除浮动的效果。内容撑开宽度，高度。有z-index层级样式。margin:0 auto；无效。默认后面标签元素覆盖前面元素。以父级标签设置relative或者absolute属性后为方向起点。没有父级设置，以body左上角为方向起点。</p>
 <p><strong>fixed</strong> 固定定位：和绝对定位相似，也改变元素属性。方向固定后，以浏览器窗口为起点定位，不会因为页面滚动而改变位置。</p>
+<p>(4)浮动布局</p>
+<p>float:left;往左浮动 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float:right;往右浮动</p>
+<p>那么怎么清除浮动呢？这里有三种方法</p>
+<p>1.给浮动元素的父级添加内容高度<br>2.给浮动元素的父级添加overflow:hidden;必备条件是有宽度或者高度，需要设置宽或高。但是有高度的话，就不需要设置overflow:hidden了。<br>3.在浮动元素的下方，同级关系的标签元素设置clear:left/right/both;需要添加额外标签来清除浮动。</p>
+<p>(5)标签的一些默认值</p>
+<p><em>body</em>:默认margin为8px</p>
 </blockquote>
 
       
