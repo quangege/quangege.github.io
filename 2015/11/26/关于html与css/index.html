@@ -23,7 +23,7 @@
         &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;
         &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
         &amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/c">
-<meta property="og:updated_time" content="2015-11-26T07:52:27.000Z">
+<meta property="og:updated_time" content="2015-11-26T08:22:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于html与css">
 <meta name="twitter:description" content="复习一下之前学的html与css1.html的基本格式
@@ -286,9 +286,33 @@
 <p>那么怎么清除浮动呢？这里有三种方法</p>
 <p>1.给浮动元素的父级添加内容高度<br>2.给浮动元素的父级添加overflow:hidden;必备条件是有宽度或者高度，需要设置宽或高。但是有高度的话，就不需要设置overflow:hidden了。<br>3.在浮动元素的下方，同级关系的标签元素设置clear:left/right/both;需要添加额外标签来清除浮动。</p>
 <p>(5)标签的一些默认值</p>
-<p><em>body</em>:默认margin为8px</p>
+<p>1.<em>body</em>:默认margin为8px；</p>
+<p>2.<em>div</em>:默认继承父级的宽度，没有高度；</p>
+<p>3.<em>ol,ul,dl</em>:默认有margin,padding,list-style-type;</p>
+<p>4.<em>h1~h6</em>:默认有margin:top;和margin:bottom;</p>
+<p>5.<em>p</em>:默认padding;</p>
+<p>6.<em>a</em>:有默认颜色，text-decoration,内容撑开高度；</p>
+<p>7.<em>table</em>:表格标签，默认display:table;</p>
+<p>(6)lovehate法则</p>
+<p>link:当前锚点没有访问过时的状态</p>
+<p>visited:访问过后的样式</p>
+<p>hover:鼠标悬浮在a标签上的样式</p>
+<p>active:鼠标点击未松开的样式</p>
+<p>(7)对表格标签的一些理解</p>
+<p>1.border-collapse:collapse;合并表格边框。</p>
+<p>border-collapse:separate;默认值，不合并表格边框。</p>
+<p>2.设置表格内字的位置：vertical-aline:top;/middle;/bottom;上中下。注意：不可以设置像素</p>
+<p>text-aline:left/center/right;左中右</p>
+<p><strong>div层垂直居中</strong></p>
+<p>第一种方法：</p>
+<pre><code><span class="attribute">position</span>:absolute;
+<span class="attribute">top</span>:<span class="number">50%</span>;
+<span class="attribute">margin-top</span>:-xxpx;<span class="comment">//xx为div高度的一半;</span>
+</code></pre><p>第二种方法：</p>
 </blockquote>
-
+<pre><code><span class="attribute">display</span>:table-cell;<span class="comment">//把元素变成表格行级</span>
+<span class="attribute">vertical</span>:middle;
+</code></pre>
       
     </div>
     
