@@ -165,3 +165,7 @@
     };
 
 }));
+function auto_excerpt($content) {
+    $content = substr(strip_tags($content),0,100)." [...]";
+    return $content;
+}
