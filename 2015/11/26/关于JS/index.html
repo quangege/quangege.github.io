@@ -5,16 +5,21 @@
   
   <title>关于JS | 小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写啥呢！！！！！！！！！！">
+  <meta name="description" content="说说今天学的吧
+1.JS的全局作用域和局部作用域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于JS">
 <meta property="og:url" content="http://yoursite.com/2015/11/26/关于JS/index.html">
 <meta property="og:site_name" content="小世界">
-<meta property="og:description" content="写啥呢！！！！！！！！！！">
-<meta property="og:updated_time" content="2015-11-26T08:36:11.000Z">
+<meta property="og:description" content="说说今天学的吧
+1.JS的全局作用域和局部作用域">
+<meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/73B329C3-EFC3-4BD3-A256-FCC0CB0217A3.png">
+<meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/aa.png">
+<meta property="og:updated_time" content="2015-11-27T13:34:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于JS">
-<meta name="twitter:description" content="写啥呢！！！！！！！！！！">
+<meta name="twitter:description" content="说说今天学的吧
+1.JS的全局作用域和局部作用域">
   
     <link rel="alternative" href="/atom.xml" title="小世界" type="application/atom+xml">
   
@@ -276,7 +281,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写啥呢！！！！！！！！！！">写啥呢！！！！！！！！！！</h1>
+        <h2 id="说说今天学的吧">说说今天学的吧</h2><blockquote>
+<h4 id="1-JS的全局作用域和局部作用域">1.JS的全局作用域和局部作用域</h4><a id="more"></a>
+<p>很简单，定义的变量在函数里面的则是局部作用域，其余的则是全局作用域。在函数中如果直接写 i ＝ 10；没有var也表示全局作用域。</p>
+<h4 id="2-匿名函数定义为函数表达式">2.匿名函数定义为函数表达式</h4><p>首先说一下声明函数，匿名函数以及函数表达式的区别</p>
+<p>(1)声明函数：使用function关键字 + 函数名声明的函数</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>{}
+</code></pre><p>(2)匿名函数：使用function关键字但是没有函数名的函数</p>
+<pre><code><span class="function"><span class="keyword">function</span><span class="params">()</span></span>{}
+</code></pre><p>(3)函数表达式：使用function关键字没有函数名，赋值给一个变量的函数。可以使用（）操作符，表示立即执行</p>
+<pre><code><span class="keyword">var</span> j = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{}
+
+<span class="keyword">var</span> j = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+}()<span class="comment">//立即执行</span>
+</code></pre><p><strong>那么怎么把匿名函数定义为函数表达式并立即执行呢</strong></p>
+<pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
+        console.log<span class="list">(<span class="keyword">'haha'</span>)</span>
+}</span>)</span><span class="list">()</span><span class="comment">;</span>
+</code></pre><p>第一个()表示把匿名函数定义成函数表达式，第二个()表示立即执行</p>
+<h4 id="3-预解析和作用域">3.预解析和作用域</h4><p><strong>举一些例子吧</strong></p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>{
+    <span class="built_in">console</span>.log(a)
+    <span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>{
+        <span class="keyword">var</span> a = <span class="number">20</span>;
+        <span class="built_in">console</span>.log(a)
+    }
+fn2();
+<span class="keyword">var</span> a = <span class="number">30</span>;
+<span class="built_in">console</span>.log(a)
+}
+fn1();
+</code></pre><p>结果<img src="http://7xoo7c.com1.z0.glb.clouddn.com/73B329C3-EFC3-4BD3-A256-FCC0CB0217A3.png" alt=""></p>
+<p>首先看第一个console.log(a),在函数里面，往上找无法找到给变量a定义的值，所以出来undefined。再看第二个console.log(a)，他在fn2函数里面，所以在fn2里面找，它的上面定义了a ＝ 20;所以输出20；同理第三个输出30；</p>
+<p>注意：函数内部的变量对外部是不可见的，函数内部可以访问外部函数的变量。</p>
+<p><strong>再举个例子</strong></p>
+<pre><code>var <span class="built_in">j</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+    var max = <span class="number">10</span>;
+    var <span class="built_in">i</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        console.<span class="built_in">log</span>(max);
+        <span class="keyword">return</span> max;
+    }
+    <span class="keyword">return</span> <span class="built_in">i</span>;
+}
+console.<span class="built_in">log</span>(<span class="built_in">j</span>);
+</code></pre><p>这个程序最后会输出function j()；</p>
+<p>我们来看一下JS是怎么运作的：由于这个程序我并没有给予他们运作的功能，所以他们只会自己运作，但不会反馈出来。所以最后的console.log(j)只会出来j声明的函数。那么如果我们把最后改成console.log(j())，让j声明的函数运作一下，那么最后自然会返回i声明的函数，即function i()。再来，如果最后改成console.log(j()()),同理，让i声明的函数运作，最后将会返回10.</p>
+<h4 id="最后写一下今天的一个小练习吧">最后写一下今天的一个小练习吧</h4><p><strong>关于加减乘除的</strong></p>
+<pre><code><span class="function">function <span class="title">computer</span><span class="params">()</span></span>{
+    var num = arguments[arguments.length - <span class="number">1</span>];
+    var sum = arguments.<span class="function">length
+    <span class="title">if</span> <span class="params">(num == <span class="string">'+'</span>)</span> </span>{
+        <span class="keyword">for</span> (var i = <span class="number">1</span>; i &lt; sum-<span class="number">1</span>; i++) {
+            arguments[<span class="number">0</span>] += arguments[i]
+        };
+        console.<span class="built_in">log</span>(arguments[<span class="number">0</span>])
+    }<span class="keyword">else</span> <span class="keyword">if</span>(num == <span class="string">'-'</span>){
+        <span class="keyword">for</span> (var i = <span class="number">1</span>; i &lt; sum-<span class="number">1</span>; i++) {
+            arguments[<span class="number">0</span>] -= arguments[i]
+        };
+        console.<span class="built_in">log</span>(arguments[<span class="number">0</span>])
+    }<span class="keyword">else</span> <span class="keyword">if</span>(num == <span class="string">'*'</span>){
+        <span class="keyword">for</span> (var i = <span class="number">1</span>; i &lt; sum-<span class="number">1</span>; i++) {
+            arguments[<span class="number">0</span>] *= arguments[i]
+        };
+        console.<span class="built_in">log</span>(arguments[<span class="number">0</span>])
+    }<span class="keyword">else</span> <span class="keyword">if</span>(num == <span class="string">'/'</span>){
+        <span class="keyword">for</span> (var i = <span class="number">1</span>; i &lt; sum-<span class="number">1</span>; i++) {
+            arguments[<span class="number">0</span>] /= arguments[i]
+        };
+        console.<span class="built_in">log</span>(arguments[<span class="number">0</span>])
+    }
+}
+computer(<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">'+'</span>);
+computer(<span class="number">25</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">'-'</span>);
+computer(<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">'*'</span>);
+computer(<span class="number">30</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="string">'/'</span>);
+</code></pre><p>结果：<img src="http://7xoo7c.com1.z0.glb.clouddn.com/aa.png" alt=""></p>
+</blockquote>
+
       
     </div>
     
