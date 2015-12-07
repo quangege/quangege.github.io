@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="小世界">
 <meta property="og:description" content="1.indexOf()
 查找该字符串的位置">
-<meta property="og:updated_time" content="2015-12-07T12:41:24.000Z">
+<meta property="og:updated_time" content="2015-12-07T13:04:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串方法">
 <meta name="twitter:description" content="1.indexOf()
@@ -283,19 +283,19 @@
 <p>查找该字符串的位置<br><a id="more"></a></p>
 <p>(1)不存在一律返回-1；</p>
 <p>(2)有第二个参数；表示下标</p>
-<pre><code><span class="keyword">var</span> str = <span class="string">'Hello World'</span>;
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.indexOf(<span class="string">'o'</span>));<span class="comment">//4</span>
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.indexOf(<span class="string">'o'</span>,<span class="number">5</span>));<span class="comment">//表示从第五个开始找,7</span>
+<pre><code>var <span class="built_in">str</span> = <span class="string">'Hello World'</span>;
+console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'o'</span>));<span class="comment">//4</span>
+console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'o'</span>,<span class="number">5</span>));<span class="comment">//表示从第五个开始找,7</span>
 </code></pre><p><strong>lastIndexOf</strong>从后面开始数，但下标还是不变</p>
-<pre><code><span class="built_in">console</span>.log(<span class="keyword">var</span>.lastIndexOf(<span class="string">'o'</span>));<span class="comment">//7</span>
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.lastIndexOf(<span class="string">'o'</span>,<span class="number">0</span>));<span class="comment">//-1,没找到</span>
+<pre><code>console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'o'</span>));<span class="comment">//7</span>
+console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'o'</span>,<span class="number">0</span>));<span class="comment">//-1,没找到</span>
 </code></pre></blockquote>
 <h2 id="2-slice()">2.slice()</h2><blockquote>
 <p>提取字符串的某个部分</p>
 <p>有第二个参数,前闭后开</p>
-<pre><code><span class="keyword">var</span> str = <span class="string">'Hello World'</span>;
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.slice(<span class="number">3</span>));<span class="comment">//lo World</span>
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.slice(<span class="number">3</span>,<span class="number">7</span>));<span class="comment">//lo W</span>
+<pre><code>var <span class="built_in">str</span> = <span class="string">'Hello World'</span>;
+console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(<span class="number">3</span>));<span class="comment">//lo World</span>
+console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(<span class="number">3</span>,<span class="number">7</span>));<span class="comment">//lo W</span>
 </code></pre></blockquote>
 <h2 id="3-split()">3.split()</h2><blockquote>
 <p>用于把一个字符串分割成字符串数组</p>
