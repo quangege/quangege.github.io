@@ -271,63 +271,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1-indexOf()">1.indexOf()</h2><blockquote>
-<p>查找该字符串的位置</p>
-<p>(1)不存在一律返回-1；</p>
-<p>(2)有第二个参数；表示下标</p>
-<pre><code><span class="keyword">var</span> str = <span class="string">'Hello World'</span>;
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.indexOf(<span class="string">'o'</span>));<span class="comment">//4</span>
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.indexOf(<span class="string">'o'</span>,<span class="number">5</span>));<span class="comment">//表示从第五个开始找,7</span>
-</code></pre><p><strong>lastIndexOf</strong>从后面开始数，但下标还是不变</p>
-<pre><code>console.<span class="built_in">log</span>(var.lastIndexOf(<span class="string">'o'</span>));<span class="comment">//7</span>
-console.<span class="built_in">log</span>(var.lastIndexOf(<span class="string">'o'</span>,<span class="number">0</span>));<span class="comment">//</span>
--<span class="number">1</span>,没找到
-</code></pre></blockquote>
-<h2 id="2-slice()">2.slice()</h2><blockquote>
-<p>提取字符串的某个部分</p>
-<p>有第二个参数,前闭后开</p>
-<pre><code><span class="keyword">var</span> str = <span class="string">'Hello World'</span>;
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.slice(<span class="number">3</span>));<span class="comment">//lo World</span>
-<span class="built_in">console</span>.log(<span class="keyword">var</span>.slice(<span class="number">3</span>,<span class="number">7</span>));<span class="comment">//lo W</span>
-</code></pre></blockquote>
-<h2 id="3-split()">3.split()</h2><blockquote>
-<p>用于把一个字符串分割成字符串数组</p>
-<p>有第二个参数,定义数组长度,如果超过长度就没用了</p>
-<pre><code>var str = <span class="string">'Hello World'</span>;
-console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">'1'</span>));<span class="regexp">//</span>[<span class="string">"Hello World"</span>]
-console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">'l'</span>));<span class="regexp">//</span>[<span class="string">"He"</span>,<span class="string">""</span>,<span class="string">"o Wor"</span>,<span class="string">"d"</span>]
-var str = <span class="string">'ha-hu-he-xi-la'</span>;
-console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">'-'</span>,<span class="number">3</span>));<span class="regexp">//</span>[<span class="string">"ha"</span>,<span class="string">"hu"</span>,<span class="string">"he"</span>]
-var str = <span class="string">'ha-hu-he-xi-la'</span>;
-console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">'-'</span>,<span class="number">8</span>));<span class="regexp">//</span>[<span class="string">"ha"</span>,<span class="string">"hu"</span>,<span class="string">"he"</span>,<span class="string">"xi"</span>,<span class="string">"la"</span>];
-</code></pre></blockquote>
-<h2 id="4-substring()">4.substring()</h2><blockquote>
-<p>提取相应区间的字符</p>
-<p>有第二个参数,前闭后开</p>
-<pre><code>var <span class="built_in">str</span> = <span class="string">'Hello World'</span>;
-console.<span class="built_in">log</span>(<span class="built_in">str</span>.sunstring(<span class="number">3</span>));<span class="comment">//lo World</span>
-console.<span class="built_in">log</span>(<span class="built_in">str</span>.sunstring(<span class="number">3</span>,<span class="number">8</span>));<span class="comment">//lo W</span>
-</code></pre></blockquote>
-<h2 id="5-charCodeAt()">5.charCodeAt()</h2><blockquote>
-<p>返回指定下标位置的字符Unicode编码</p>
-<pre><code>var <span class="built_in">str</span> = <span class="string">'abc'</span>.charCodeAt(<span class="number">0</span>);
-console.<span class="built_in">log</span>(<span class="built_in">str</span>);<span class="comment">//a的Unicode编码是97,b98,c99</span>
-</code></pre></blockquote>
-<h2 id="6-charAt()">6.charAt()</h2><blockquote>
-<p>返回指定位置的字符</p>
-<pre><code>var <span class="built_in">str</span> = <span class="string">'abc'</span>.charAt(<span class="number">0</span>);
-console.<span class="built_in">log</span>(<span class="built_in">str</span>);<span class="comment">//a</span>
-</code></pre></blockquote>
-<h2 id="7-toLowerCase()">7.toLowerCase()</h2><blockquote>
-<p>把字符串转换为小写</p>
-</blockquote>
-<pre><code>var <span class="built_in">str</span> = <span class="string">"HAHA haha HaHa"</span>;
-console.<span class="built_in">log</span>(<span class="built_in">str</span>.toLowerCase());<span class="comment">//haha haha haha</span>
-</code></pre><h2 id="8-toUpperCase()">8.toUpperCase()</h2><blockquote>
-<p>把字符串转换为大写</p>
-<pre><code>var <span class="built_in">str</span> = <span class="string">"HAHA haha HaHa"</span>;
-console.<span class="built_in">log</span>(<span class="built_in">str</span>.toUpperCase());<span class="comment">//HAHA HAHA HAHA</span>
-</code></pre></blockquote>
-
+<p>查找该字符串的位置<br>
       
     </div>
     
@@ -336,6 +280,10 @@ console.<span class="built_in">log</span>(<span class="built_in">str</span>.toUp
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/字符串方法/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
