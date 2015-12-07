@@ -165,7 +165,3 @@
     };
 
 }));
-function auto_excerpt($content) {
-    $content = substr(strip_tags($content, '<p><br>'),0,418)."<br/> [...]";
-    return $content;
-}
