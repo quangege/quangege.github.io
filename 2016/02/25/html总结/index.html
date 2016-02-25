@@ -13,7 +13,8 @@
 <meta property="og:site_name" content="小世界">
 <meta property="og:description" content="#html总结
 1.html基本结构">
-<meta property="og:updated_time" content="2016-02-25T09:17:53.000Z">
+<meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg">
+<meta property="og:updated_time" content="2016-02-25T11:58:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html总结">
 <meta name="twitter:description" content="#html总结
@@ -300,14 +301,131 @@
 <p>(2)script:</p>
 <p>(3)link:用于引入css文件</p>
 <p>(4)style:内部引入css</p>
-<p>###(5)meta</p>
+<p><strong>(5)meta</strong></p>
 <p>meta提供关于HTML文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务。</p>
 <p>&lt;meta charset=’utf-8’ /&gt;  声明编码格式</p>
 <p>&lt;meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1” /&gt;优先使用 IE 最新版本和 Chrome</p>
 <p>&lt;meta http-equiv=”refresh” content=”过多少秒开始跳转;url=跳转地址” /&gt;页面重定向和刷新</p>
 <p>&lt;meta name=”keywords” content=”your tags” /&gt; 页面关键字</p>
-<p>等等</p>
+<p>&lt;meta name=“description”content=”120｜ 150 words” /&gt;  页面描述</p>
+<p>等等，这里就不一一举例了，嘻嘻。</p>
+<p>(6)base</p>
+<p>&lt;base target=”_blank” /&gt;:点击链接重新打开一个网页</p>
 </blockquote>
+<pre><code><span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">base</span> <span class="attribute">href</span>=<span class="value">"http://www.w3school.com.cn"</span> /&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"html/index.asp"</span>&gt;</span>W3School<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="comment">&lt;!--相同部分可以不写--&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+</code></pre><ul>
+<li><strong>h1-h6</strong>  标题标签</li>
+</ul>
+<blockquote>
+<p>标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题。并且依据重要性递减。h1是最高的等级。</p>
+</blockquote>
+<ul>
+<li><strong>p</strong> 段落标签</li>
+</ul>
+<blockquote>
+<p>有默认的margin</p>
+</blockquote>
+<ul>
+<li><strong>em strong</strong> 标签</li>
+</ul>
+<blockquote>
+<p>em表示强调，strong表示更强烈的强调</p>
+</blockquote>
+<ul>
+<li><strong>div</strong></li>
+</ul>
+<blockquote>
+<p>块级标签，可设宽高，margin,padding等等</p>
+</blockquote>
+<ul>
+<li><strong>a</strong> 锚点链接</li>
+</ul>
+<blockquote>
+<p>href:地址</p>
+<p>title:描述信息</p>
+<p>target:规定在何处打开链接文档</p>
+</blockquote>
+<ul>
+<li><strong>img</strong> 图片</li>
+</ul>
+<blockquote>
+<p>为网页插入图片，下面有默认的间隔，可以使用display:block;消除</p>
+<p>src 图像的位置</p>
+<p>title 提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)</p>
+<p>alt 指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；</p>
+</blockquote>
+<ul>
+<li><p>q标签，短文本引用，不常用</p>
+</li>
+<li><p>blockquote标签，长文本引用</p>
+</li>
+<li><p>br 换行标签</p>
+</li>
+<li><p>hr 分割线标签</p>
+</li>
+<li><p>列表</p>
+</li>
+</ul>
+<blockquote>
+<p>(1)无序列表 ul li</p>
+<p>(2)有序列表 ol li</p>
+<p>(3)自定义列表 dl dt dd 主要用于词语的解释</p>
+</blockquote>
+<ul>
+<li>form 表单</li>
+</ul>
+<blockquote>
+<p>action:输入的数据被传送到的地址,比如一个PHP页面(test.php)。</p>
+<p>method:数据传输方式，有两种，post和get</p>
+<p>input 输入框 type=”text”表示文本框  type=”password”表示密码输入框</p>
+<p>name 为文本框命名，以备后台程序ASP、PHP使用</p>
+<p>value 为文本输入框设置默认值（一般起到提示作用）</p>
+</blockquote>
+<pre><code>&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> name=<span class="string">""</span> value=<span class="string">""</span>&gt;
+</code></pre><blockquote>
+<p>type=”radio” 表示单选框 type=”checkbox”表示复选框</p>
+<p>value 提交数据到服务器的值（后台程序PHP使用）</p>
+<p>name 为控件命名，以备后台程序ASP、PHP使用</p>
+<p>checked 当设置checked 或 checked=”checked”时，该选项被默认选中</p>
+</blockquote>
+<pre><code>&lt;input  type=<span class="string">"radio"</span> name=<span class="string">" "</span> <span class="keyword">value</span>=<span class="string">" "</span> <span class="keyword">checked</span>=<span class="string">"checked"</span>&gt;
+</code></pre><p><strong>注意：同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用</strong></p>
+<ul>
+<li><p>select 下啦列表框，option 下拉选项，加multiple属性可以实现多选功能，不推荐</p>
+<pre><code><span class="variable">&lt;select multiple&gt;</span>
+    <span class="variable">&lt;option&gt;</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="variable">&lt;/option&gt;</span>
+    <span class="variable">&lt;option&gt;</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="variable">&lt;/option&gt;</span>
+    <span class="variable">&lt;option&gt;</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="variable">&lt;/option&gt;</span>
+    <span class="variable">&lt;option&gt;</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="variable">&lt;/option&gt;</span>
+    <span class="variable">&lt;option&gt;</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="variable">&lt;/option&gt;</span>
+<span class="variable">&lt;/select&gt;</span>
+</code></pre></li>
+<li><p>表格标签</p>
+<pre><code><span class="tag">&lt;<span class="title">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="comment">&lt;!--可不写--&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>***<span class="tag">&lt;/<span class="title">th</span>&gt;</span><span class="comment">&lt;!--表头--&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>***<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>***<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>***<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span>***<span class="tag">&lt;/<span class="title">td</span>&gt;</span><span class="comment">&lt;!--单元格--&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span> <span class="attribute">rowspan</span>=<span class="value">"2"</span>&gt;</span>***<span class="tag">&lt;/<span class="title">td</span>&gt;</span> <span class="comment">&lt;!--表示占两列--&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span>&gt;</span>***<span class="tag">&lt;/<span class="title">td</span>&gt;</span> <span class="comment">&lt;!--表示占两行--&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span>***<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+</code></pre></li>
+</ul>
+<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt="嘻嘻"></p>
 
       
     </div>
