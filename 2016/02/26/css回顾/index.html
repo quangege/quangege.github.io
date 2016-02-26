@@ -5,18 +5,18 @@
   
   <title>css回顾 | 小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.盒子模型">
+  <meta name="description" content="1.css引入方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css回顾">
 <meta property="og:url" content="http://yoursite.com/2016/02/26/css回顾/index.html">
 <meta property="og:site_name" content="小世界">
-<meta property="og:description" content="1.盒子模型">
+<meta property="og:description" content="1.css引入方式">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/hezi.png">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg">
-<meta property="og:updated_time" content="2016-02-26T03:42:34.000Z">
+<meta property="og:updated_time" content="2016-02-26T12:57:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css回顾">
-<meta name="twitter:description" content="1.盒子模型">
+<meta name="twitter:description" content="1.css引入方式">
   
     <link rel="alternative" href="/atom.xml" title="小世界" type="application/atom+xml">
   
@@ -278,8 +278,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-盒子模型">1.盒子模型</h2><a id="more"></a>
+        <h2 id="1-css引入方式">1.css引入方式</h2><a id="more"></a>
 <blockquote>
+<p>(1).内联样式：把css代码直接写在html标签中。<div style="height:50px;width:50px"></div> 。/优先级最高，不会被其他样式覆盖。不利于代码的维护，没有样式内容分离，影响阅读体验</p>
+<p>(2).内部引入：style,位置在head。不利于复用，适用于单一的页面</p>
+<p>(3).外部引入：link,位置在head。解决了内容和样式的分离，更加美观、可以共用。但是增加了一次请求</p>
+<p>(4).import引入—@import url(reset.css)在css里写,不推荐使用，会增加请求。</p>
+</blockquote>
+<h2 id="2-盒子模型">2.盒子模型</h2><blockquote>
 <p>盒子在页面中所占的宽度＝左右边距+左右边框+左右填充+内容宽度</p>
 <p>盒子在页面中所占的高度＝上下边距+上下边框+上下填充+内容高度</p>
 <p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/hezi.png" alt="盒子"></p>
@@ -299,7 +305,7 @@
 <li><strong>padding 内间距</strong></li>
 </ul>
 <blockquote>
-<p>padding:<strong>px; 上下左右填充</strong>像素；</p>
+<p>padding:Xpx; 上下左右填充X像素；</p>
 <p>padding:Xpx Ypx; 上下填充X像素，左右填充Y像素；</p>
 <p>padding:Xpx Ypx Zpx; 上填充X像素，左右填充Y像素，下填充Z像素</p>
 <p>padding:Xpx Ypx Zpx Tpx; 上填充X像素，右填充Y像素，下填充Z像素，左填充T像素</p>
@@ -311,18 +317,18 @@
 <p>margin和padding用法差不多</p>
 <p>margin:0 auto; auto表示居中；</p>
 </blockquote>
-<h2 id="2-选择器">2.选择器</h2><ul>
+<h2 id="3-选择器">3.选择器</h2><ul>
 <li><p>标签选择器：直接作用于选择的标签元素，是一个集合</p>
 <pre><code><span class="keyword">div</span>{
     <span class="comment">/*样式*/</span>
 }
 </code></pre></li>
-<li><p>id选择器：直接作用于叫该名称的标签元素 是唯一的，标签也是唯一的，只对改名称标签有效。</p>
+<li><p>id选择器：直接作用于叫该名称的标签元素是唯一的，标签也是唯一的，只对该名称标签有效。</p>
 <pre><code><span class="comment">#名字{</span>
     /<span class="keyword">*</span>样式<span class="keyword">*</span>/
 }
 </code></pre></li>
-<li><p>类选择器</p>
+<li><p>类选择器：给一类标签起一个标识</p>
 <pre><code>.名字<span class="rules">{
     <span class="comment">/*样式*/</span>
 }</span>
@@ -337,7 +343,7 @@
     <span class="comment">/*样式*/</span>
 }
 </code></pre></li>
-<li><p>通配选择器</p>
+<li><p>通配选择器，作用于所有标签</p>
 <pre><code><span class="keyword">*</span>{
     /<span class="keyword">*</span>样式<span class="keyword">*</span>/
 }
@@ -347,17 +353,21 @@
     <span class="comment">/*样式*/</span>
 }
 </code></pre></li>
-<li><p>伪类选择器</p>
-<pre><code><span class="constant">E</span><span class="symbol">:first-child</span>{
-    <span class="regexp">/*样式*/</span>
-}
+<li><p>伪类选择器 :link、:hover、:active、:visited</p>
+<pre><code><span class="tag">E</span><span class="pseudo">:link</span><span class="rules">{
+    <span class="comment">/*样式*/</span>
+}</span>
 </code></pre></li>
 </ul>
-<h2 id="3-优先级">3.优先级</h2><p>&lt;标签优先级：1</p>
+<p>-伪元素选择器</p>
+<pre><code><span class="constant">E</span><span class="symbol">:first-line</span>{
+    <span class="regexp">/*样式*/</span>
+}
+</code></pre><h2 id="4-优先级">4.优先级</h2><p>&lt;标签优先级：1</p>
 <p>&lt;类class：100</p>
 <p>&lt;id：1000</p>
 <p>&lt;!important;提高优先级</p>
-<h2 id="4-浮动">4.浮动</h2><blockquote>
+<h2 id="5-浮动">5.浮动</h2><blockquote>
 <p>float:left;向左浮动；</p>
 <p>float:right;向右浮动；</p>
 <p>float:none;默认值；</p>
@@ -371,7 +381,7 @@
 <p>overflow-x:scroll;x轴滚动条</p>
 <p>overflow-x:hidden;x轴没有滚动条</p>
 </blockquote>
-<h2 id="5-定位布局">5.定位布局</h2><blockquote>
+<h2 id="6-定位布局">6.定位布局</h2><blockquote>
 <p><strong>1.相对定位</strong></p>
 <p>position:relative;相对自身当前位置上下左右定位，值可以为负数。可以对块，行标签使用。不会改变标签属性</p>
 <p>z-index:1;表示当前标签的层级。当前标签必须使用position属性才有效果。取值为数字，不能为负数；</p>
@@ -379,6 +389,27 @@
 <p>position:absolute;如果没有父级标签设置relativ；当前标签元素是以body可视区域为起点。如果有父级标签设置relative；则以父级标签位置为起点。脱离文档流，改变标签的属性，类似于display:block</p>
 <p><strong>3.固定定位</strong></p>
 <p>position:fixed;相对于浏览器窗口进行定位</p>
+</blockquote>
+<h2 id="7-颜色">7.颜色</h2><ul>
+<li><p>关键词—css支持17种合法命名：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal</p>
+</li>
+<li><p>十六进制—将三个介于00-FF的值规定了颜色的成分</p>
+</li>
+<li><p>RGB—red, green, blue。每个参数 (red、green 以及 blue) 定义颜色的强度，可以是介于 0 与 255 之间的整数，或者是百分比值（从 0% 到 100%）。</p>
+</li>
+</ul>
+<h2 id="8-line-height_行高">8.line-height 行高</h2><blockquote>
+<p>上一段基线到下一段基线的距离</p>
+<p>行距：基线到下一段顶端的距离</p>
+</blockquote>
+<h2 id="9-BFC_块级格式化上下文">9.BFC 块级格式化上下文</h2><blockquote>
+<p><strong>满足下面css声明之一的元素便会生成BFC</strong></p>
+<p>1.根元素</p>
+<p>2.float的值不为none</p>
+<p>3.overflow的值不为visible</p>
+<p>4.display的值为inline-block、table-cell、table-caption</p>
+<p>5.position的值为absolute或fixed</p>
+<p><em>在一个bfc容器里面，里面的子元素无论怎么折腾，都不会影响外部，bfc具有很强的包裹性！</em></p>
 </blockquote>
 <p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt="xixi"></p>
 
