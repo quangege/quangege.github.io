@@ -270,109 +270,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-盒子模型">1.盒子模型</h2><blockquote>
-<p>盒子在页面中所占的宽度＝左右边距+左右边框+左右填充+内容宽度</p>
-<p>盒子在页面中所占的高度＝上下边距+上下边框+上下填充+内容高度</p>
-<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/hezi.png" alt="盒子"></p>
-</blockquote>
-<ul>
-<li><strong>border 边框</strong></li>
-</ul>
-<blockquote>
-<p>border-width  边框宽度,默认宽度是3px,数值不能为负数</p>
-<p>border-color  边框颜色，不设置颜色的情况下，显示的颜色和字体颜色相同</p>
-<p>border-style  边框样式，主要有四种：solid 实线，dotted 点状线，dashed 虚线，double 双线</p>
-<p>复合写法  border:1px red solid;</p>
-<p>border-radius:50%; 变成圆边；</p>
-<p>ridge 3D垄状边框，有兼容性问题，火狐比较好</p>
-</blockquote>
-<ul>
-<li><strong>padding 内间距</strong></li>
-</ul>
-<blockquote>
-<p>padding:<strong>px; 上下左右填充</strong>像素；</p>
-<p>padding:Xpx Ypx; 上下填充X像素，左右填充Y像素；</p>
-<p>padding:Xpx Ypx Zpx; 上填充X像素，左右填充Y像素，下填充Z像素</p>
-<p>padding:Xpx Ypx Zpx Tpx; 上填充X像素，右填充Y像素，下填充Z像素，左填充T像素</p>
-</blockquote>
-<ul>
-<li><strong>margin</strong></li>
-</ul>
-<blockquote>
-<p>margin和padding用法差不多</p>
-<p>margin:0 auto; auto表示居中；</p>
-</blockquote>
-<h2 id="2-选择器">2.选择器</h2><ul>
-<li><p>标签选择器：直接作用于选择的标签元素，是一个集合</p>
-<pre><code><span class="keyword">div</span>{
-    <span class="comment">/*样式*/</span>
-}
-</code></pre></li>
-<li><p>id选择器：直接作用于叫该名称的标签元素 是唯一的，标签也是唯一的，只对改名称标签有效。</p>
-<pre><code><span class="comment">#名字{</span>
-    /<span class="keyword">*</span>样式<span class="keyword">*</span>/
-}
-</code></pre></li>
-<li><p>类选择器</p>
-<pre><code>.名字<span class="rules">{
-    <span class="comment">/*样式*/</span>
-}</span>
-</code></pre></li>
-<li><p>群组选择器</p>
-<pre><code>p, <span class="keyword">body, </span>img, div{
-    <span class="comment">/*样式*/</span>
-}
-</code></pre></li>
-<li><p>父子选择器</p>
-<pre><code><span class="operator">div</span> ol li <span class="operator">a</span>{
-    <span class="comment">/*样式*/</span>
-}
-</code></pre></li>
-<li><p>通配选择器</p>
-<pre><code><span class="keyword">*</span>{
-    /<span class="keyword">*</span>样式<span class="keyword">*</span>/
-}
-</code></pre></li>
-<li><p>子元素选择器</p>
-<pre><code><span class="keyword">div</span>&gt;p{
-    <span class="comment">/*样式*/</span>
-}
-</code></pre></li>
-<li><p>伪类选择器</p>
-<pre><code><span class="constant">E</span><span class="symbol">:first-child</span>{
-    <span class="regexp">/*样式*/</span>
-}
-</code></pre></li>
-</ul>
-<h2 id="3-优先级">3.优先级</h2><p>&lt;标签优先级：1</p>
-<p>&lt;类class：100</p>
-<p>&lt;id：1000</p>
-<p>&lt;!important;提高优先级</p>
-<h2 id="4-浮动">4.浮动</h2><blockquote>
-<p>float:left;向左浮动；</p>
-<p>float:right;向右浮动；</p>
-<p>float:none;默认值；</p>
-<p> <strong>清除浮动的方法</strong></p>
-<p>1.给父级设个固定高</p>
-<p>2.clear:left;right;both;清除左，右，左右；</p>
-<p><em>3.overflow:visible;默认值</em></p>
-<p> overflow:hidden;超出父级边框的内容裁剪掉</p>
-<p> overflow:scroll;超出父级边框的内容裁剪掉，当内容高度超过父级高度的时候出现滚动条</p>
-<p> ovrflow:auto；也是滚动条</p>
-<p>overflow-x:scroll;x轴滚动条</p>
-<p>overflow-x:hidden;x轴没有滚动条</p>
-</blockquote>
-<h2 id="5-定位布局">5.定位布局</h2><blockquote>
-<p><strong>1.相对定位</strong></p>
-<p>position:relative;相对自身当前位置上下左右定位，值可以为负数。可以对块，行标签使用。不会改变标签属性</p>
-<p>z-index:1;表示当前标签的层级。当前标签必须使用position属性才有效果。取值为数字，不能为负数；</p>
-<p><strong>2.绝对定位</strong></p>
-<p>position:absolute;如果没有父级标签设置relativ；当前标签元素是以body可视区域为起点。如果有父级标签设置relative；则以父级标签位置为起点。脱离文档流，改变标签的属性，类似于display:block</p>
-<p><strong>3.固定定位</strong></p>
-<p>position:fixed;相对于浏览器窗口进行定位</p>
-</blockquote>
-<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt="xixi"></p>
-
+        <h2 id="1-盒子模型">1.盒子模型</h2>
       
     </div>
     
@@ -381,6 +279,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/26/css回顾/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
