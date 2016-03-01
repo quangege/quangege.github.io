@@ -270,82 +270,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##1.javascript共有五种基本数据类型</p>
-<blockquote>
-<p>(1).数值 number</p>
-<p>(2).字符串 string</p>
-<p>(3).布尔值 boolean</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/94752-7c5eb2f781cbd6f6.png" alt=""></p>
-<p>(4).空 null</p>
-<p>null类型的默认值是null，表示一个空对象指针,如果定义的变量准备在将来用于保存对象,那么就该将该变量初始化为null,优化代码.</p>
-<p>(5).undefined</p>
-<p>在使用var声明变量，但未对其加以初始化时，这个变量的类型就是undefined，且其默认初始化值为undefined</p>
-<p>对未声明与初始化的变量，直接使用，那么这个变量的类型也是undefined，但是没有默认初始化值。</p>
-<p>type test;//undefined  直接调用就会报错</p>
-</blockquote>
-<p>##2.Number函数</p>
-<blockquote>
-<p>将任意类型的值转化成数字。</p>
-</blockquote>
-<pre><code><span class="built_in">Number</span>(<span class="string">"123"</span>);<span class="comment">//123</span>
-<span class="built_in">Number</span>(<span class="string">"123abc"</span>);<span class="comment">//NaN</span>
-<span class="built_in">Number</span>(<span class="string">""</span>);<span class="comment">//0</span>
-<span class="built_in">Number</span>(<span class="literal">false</span>);<span class="comment">//0</span>
-<span class="built_in">Number</span>(<span class="literal">null</span>);<span class="comment">//0</span>
-<span class="built_in">Number</span>(<span class="literal">undefined</span>);<span class="comment">//NaN</span>
-<span class="built_in">Number</span>({xixi:<span class="number">1</span>});<span class="comment">//NaN</span>
-</code></pre><p>##3.String函数</p>
-<blockquote>
-<p>将任意类型的值强制转化成字符串</p>
-</blockquote>
-<pre><code><span class="built_in">String</span>(<span class="number">123</span>);<span class="comment">// "123"</span>
-<span class="built_in">String</span>(<span class="string">"123"</span>);<span class="comment">// "123"</span>
-<span class="built_in">String</span>(<span class="literal">false</span>);<span class="comment">// "false"</span>
-<span class="built_in">String</span>(<span class="literal">undefined</span>);<span class="comment">// "undefined"</span>
-<span class="built_in">String</span>(<span class="literal">null</span>);<span class="comment">// "null"</span>
-</code></pre><p>##4.Boolean</p>
-<blockquote>
-<p>将任意类型的变量强制转换为布尔值。</p>
-</blockquote>
-<pre><code><span class="built_in">Boolean</span>(<span class="string">""</span>);<span class="comment">// false</span>
-<span class="built_in">Boolean</span>(<span class="string">"xixi"</span>);<span class="comment">// true</span>
-<span class="built_in">Boolean</span>(-<span class="number">1</span>);<span class="comment">// true</span>
-<span class="built_in">Boolean</span>(<span class="literal">null</span>);<span class="comment">// false</span>
-<span class="built_in">Boolean</span>(<span class="number">0</span>);<span class="comment">// false </span>
-<span class="built_in">Boolean</span>(<span class="keyword">new</span>   <span class="built_in">Object</span>());<span class="comment">// true </span>
-</code></pre><p>##5.自动转化</p>
-<blockquote>
-<p>1.加法运算。当一个值为字符串，另一个值为非字符串，结果转为字符串。</p>
-</blockquote>
-<pre><code><span class="number">1</span>+<span class="string">"2"</span> <span class="comment">// "12"</span>
-<span class="string">"1"</span>+<span class="literal">true</span> <span class="comment">// "1true"</span>
-<span class="string">"1"</span>+{} <span class="comment">// "1[object object]"</span>
-<span class="string">"1"</span>+[] <span class="comment">// "1"</span>
-<span class="string">"1"</span>+<span class="literal">undefined</span> <span class="comment">// "1undefined"</span>
-<span class="string">"1"</span>+ <span class="literal">null</span> <span class="comment">// "1null"</span>
-<span class="string">"1"</span>+<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{} <span class="comment">// "1function(){}"</span>
-</code></pre><blockquote>
-<p>2.除加法外其余运算符可以转换为数值</p>
-</blockquote>
-<pre><code><span class="string">"2"</span>-<span class="string">"1"</span> <span class="comment">// 1</span>
-<span class="string">"2"</span>/<span class="number">1</span> <span class="comment">// 2</span>
-<span class="literal">true</span>-<span class="number">1</span> <span class="comment">// 0</span>
-<span class="literal">false</span>-<span class="number">1</span> <span class="comment">// -1</span>
-<span class="string">"1"</span>*[] <span class="comment">// 0</span>
-</code></pre><p>##6.四种特殊的转换<br>&lt;(1)空数组+空数组 ＝ 空字符串</p>
-<p>&lt;(2)空数组+空对象 ＝ “[object object]”</p>
-<p>&lt;(3)空对象+空数组 ＝ 0</p>
-<p>&lt;(4)空对象+空对象 ＝ NaN    </p>
-<p>##7.parseInt(),parseFloat()</p>
-<p>&lt;parseInt()把值转换为整数，还可以自己设置多少进制</p>
-<pre><code><span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"123aaa"</span>)</span></span> <span class="comment">// 123</span>
-<span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"123.4"</span>)</span></span> <span class="comment">// 123</span>
-<span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"aaa"</span>)</span></span> <span class="comment">// NaN</span>
-</code></pre><p>&lt;parseFloat()把值转换为浮点数</p>
-<pre><code><span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"1a"</span>)</span></span> <span class="comment">// 1</span>
-<span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"12.12"</span>)</span></span> <span class="comment">// 12.12</span>
-<span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"aa"</span>)</span></span> <span class="comment">// NaN</span>
-</code></pre>
+        <p>##1.javascript共有五种基本数据类型<br>
       
     </div>
     
@@ -354,6 +279,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/01/基本数据类型转换/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
