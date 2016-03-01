@@ -13,7 +13,7 @@
 <meta property="og:description" content="1.javascript共有五种基本数据类型">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/blooean.png">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg">
-<meta property="og:updated_time" content="2016-03-01T13:57:34.000Z">
+<meta property="og:updated_time" content="2016-03-01T13:59:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基本数据类型转换">
 <meta name="twitter:description" content="1.javascript共有五种基本数据类型">
@@ -336,15 +336,21 @@
 <span class="literal">true</span>-<span class="number">1</span> <span class="comment">// 0</span>
 <span class="literal">false</span>-<span class="number">1</span> <span class="comment">// -1</span>
 <span class="string">"1"</span>*[] <span class="comment">// 0</span>
-</code></pre><h2 id="6-四种特殊的转换">6.四种特殊的转换</h2><p>&lt;(1)空数组+空数组 ＝ 空字符串</p>
-<p>&lt;(2)空数组+空对象 ＝ “[object object]”</p>
-<p>&lt;(3)空对象+空数组 ＝ 0</p>
-<p>&lt;(4)空对象+空对象 ＝ NaN    </p>
-<h2 id="7-parseInt(),parseFloat()">7.parseInt(),parseFloat()</h2><p>&lt;parseInt()把值转换为整数，还可以自己设置多少进制</p>
+</code></pre><h2 id="6-四种特殊的转换">6.四种特殊的转换</h2><blockquote>
+<p>(1)空数组+空数组 ＝ 空字符串</p>
+<p>(2)空数组+空对象 ＝ “[object object]”</p>
+<p>(3)空对象+空数组 ＝ 0</p>
+<p>(4)空对象+空对象 ＝ NaN    </p>
+</blockquote>
+<h2 id="7-parseInt(),parseFloat()">7.parseInt(),parseFloat()</h2><blockquote>
+<p>parseInt()把值转换为整数，还可以自己设置多少进制</p>
+</blockquote>
 <pre><code><span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"123aaa"</span>)</span></span> <span class="comment">// 123</span>
 <span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"123.4"</span>)</span></span> <span class="comment">// 123</span>
 <span class="function"><span class="title">parseInt</span><span class="params">(<span class="string">"aaa"</span>)</span></span> <span class="comment">// NaN</span>
-</code></pre><p>&lt;parseFloat()把值转换为浮点数</p>
+</code></pre><blockquote>
+<p>parseFloat()把值转换为浮点数</p>
+</blockquote>
 <pre><code><span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"1a"</span>)</span></span> <span class="comment">// 1</span>
 <span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"12.12"</span>)</span></span> <span class="comment">// 12.12</span>
 <span class="function"><span class="title">parseFloat</span><span class="params">(<span class="string">"aa"</span>)</span></span> <span class="comment">// NaN</span>
