@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/didi.png">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/jiujiu.png">
 <meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg">
-<meta property="og:updated_time" content="2016-03-07T13:59:05.000Z">
+<meta property="og:updated_time" content="2016-03-07T14:00:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php初学">
 <meta name="twitter:description" content="PHP基础语法">
@@ -354,8 +354,24 @@ show();
 show();
 show();
 </code></pre><p>结果：2，3，4</p>
-<p>九九乘法表<br>    &lt;!DOCTYPE html&gt;<br>        <html lang="en"><br>        <head><br>            <meta charset="UTF-8"><br>            <title>Document</title><br>        </head><br>        <body><br>            <table><br>                &lt;?php<br>                    for ($i=1; $i &lt; 10; $i++) {<br>                        echo “<tr>“;<br>                        for ($j=1; $j &lt; 10; $j++) {<br>                            echo “<td style="font-size:30px;border:1px black solid">“;<br>                            echo “$j<em>$i=”.$i</em>$j;<br>                            echo “</td>“;<br>                            if ($i == $j) {<br>                                break;<br>                            }<br>                        }<br>                        echo “</tr>“;<br>                    }<br>                 ?&gt;<br>            </table><br>        </body><br>    </html></p>
-<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/jiujiu.png" alt=""></p>
+<p>九九乘法表</p>
+<pre><code>&lt;table&gt;
+    &lt;?php 
+        <span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="number">10</span>; <span class="variable">$i</span>++) { 
+            echo <span class="string">"&lt;tr&gt;"</span>;
+            for (<span class="variable">$j</span>=<span class="number">1</span>; <span class="variable">$j</span> &lt; <span class="number">10</span>; <span class="variable">$j</span>++) { 
+                echo <span class="string">"&lt;td style='font-size:30px;border:1px black solid'&gt;"</span>;
+                echo <span class="string">"$j*$i="</span>.<span class="variable">$i</span>*<span class="variable">$j</span>;
+                echo <span class="string">"&lt;/td&gt;"</span>;
+                if (<span class="variable">$i</span> == <span class="variable">$j</span>) {
+                    break;
+                }
+            }
+            echo <span class="string">"&lt;/tr&gt;"</span>;
+        }
+     ?&gt;
+&lt;/table&gt;
+</code></pre><p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/jiujiu.png" alt=""></p>
 <h1 id="待续">待续</h1><p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt=""></p>
 
       
