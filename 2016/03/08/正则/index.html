@@ -3,17 +3,55 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | 小世界</title>
+  <title>正则 | 小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="蓝鸥学习历程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小世界">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="它是对字符串执行模式匹配的强大工具
+元字符
+
+. &amp;nbsp;&amp;nbsp;:查找单个字符，除了换行和行结束符
+
+\w : 查找单词字符(数字、字母、下划线);
+
+
+
+var str = &quot; ds23a sd@12_fsd  &quot;;
+console.log(str.match(/\w+/g));//[&quot;ds23a&quot;,&quot;sd&quot;,&quot;12_fsd&quot;]
+
++表示匹配一个或多个在它前面的字符；最后加g表示在全局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则">
+<meta property="og:url" content="http://yoursite.com/2016/03/08/正则/index.html">
 <meta property="og:site_name" content="小世界">
-<meta property="og:description" content="蓝鸥学习历程">
+<meta property="og:description" content="它是对字符串执行模式匹配的强大工具
+元字符
+
+. &amp;nbsp;&amp;nbsp;:查找单个字符，除了换行和行结束符
+
+\w : 查找单词字符(数字、字母、下划线);
+
+
+
+var str = &quot; ds23a sd@12_fsd  &quot;;
+console.log(str.match(/\w+/g));//[&quot;ds23a&quot;,&quot;sd&quot;,&quot;12_fsd&quot;]
+
++表示匹配一个或多个在它前面的字符；最后加g表示在全局">
+<meta property="og:image" content="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg">
+<meta property="og:updated_time" content="2016-03-08T13:51:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小世界">
-<meta name="twitter:description" content="蓝鸥学习历程">
+<meta name="twitter:title" content="正则">
+<meta name="twitter:description" content="它是对字符串执行模式匹配的强大工具
+元字符
+
+. &amp;nbsp;&amp;nbsp;:查找单个字符，除了换行和行结束符
+
+\w : 查找单词字符(数字、字母、下划线);
+
+
+
+var str = &quot; ds23a sd@12_fsd  &quot;;
+console.log(str.match(/\w+/g));//[&quot;ds23a&quot;,&quot;sd&quot;,&quot;12_fsd&quot;]
+
++表示匹配一个或多个在它前面的字符；最后加g表示在全局">
   
     <link rel="alternative" href="/atom.xml" title="小世界" type="application/atom+xml">
   
@@ -242,184 +280,197 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-正则" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/03/08/正则/" class="article-date">
+  	<time datetime="2016-03-08T13:50:56.000Z" itemprop="datePublished">2016-03-08</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      正则
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/08/正则/" class="archive-article-date">
-  	<time datetime="2016-03-08T13:50:56.000Z" itemprop="datePublished">3月 8</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/08/正则/">正则</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>它是对字符串执行模式匹配的强大工具</em></p>
+<h2 id="元字符">元字符</h2><blockquote>
+<ol>
+<li><p><strong>.</strong> &nbsp;&nbsp;:查找单个字符，除了换行和行结束符</p>
+</li>
+<li><p>\w : 查找单词字符(数字、字母、下划线);</p>
+</li>
+</ol>
+</blockquote>
+<pre><code>var str = <span class="string">" ds23a sd@12_fsd  "</span>;
+<span class="built_in">console</span>.log(str.match(<span class="regexp">/\w+/g</span>));<span class="regexp">//</span>[<span class="string">"ds23a"</span>,<span class="string">"sd"</span>,<span class="string">"12_fsd"</span>]
+</code></pre><blockquote>
+<p>+表示匹配一个或多个在它前面的字符；最后加g表示在全局中寻找</p>
+<ol>
+<li>\d :查找数字</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">" ds23a sd@12_fsd  "</span>;
+console.<span class="literal">log</span>(str.<span class="literal">match</span>(/\<span class="keyword">d</span>+/<span class="keyword">g</span>));<span class="comment">//["23","12"]</span>
+</code></pre><blockquote>
+<ol>
+<li>\s :查找空白字符</li>
+</ol>
+</blockquote>
+<pre><code>var str = <span class="string">" ds23a   sd@12_fsd "</span>;
+<span class="built_in">console</span>.log(str.match(<span class="regexp">/\s+/g</span>));<span class="regexp">//</span>[<span class="string">" "</span>,<span class="string">"   "</span>,<span class="string">" "</span>]
+</code></pre><blockquote>
+<ol>
+<li>\b :匹配单词边界</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /\bsd\b/<span class="keyword">g</span>;
+console.<span class="literal">log</span>(str.<span class="literal">match</span>(<span class="keyword">reg</span>));<span class="comment">//["sd","sd"]</span>
+</code></pre><blockquote>
+<ol>
+<li><p>\n :查找换行符</p>
+</li>
+<li><p>\u :匹配汉字</p>
+</li>
+<li><p>n$ :匹配任何结尾为n的字符串</p>
+</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /<span class="keyword">d</span>$/;
+console.<span class="literal">log</span>(<span class="keyword">reg</span>.<span class="keyword">test</span>(str)));<span class="comment">//true</span>
+</code></pre><blockquote>
+<ol>
+<li>^n :匹配任何开头为n的字符串</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /^s/;
+console.<span class="literal">log</span>(<span class="keyword">reg</span>.<span class="keyword">test</span>(str)));<span class="comment">//true</span>
+</code></pre><h2 id="转义字符">转义字符</h2><blockquote>
+<p>1.[abc]   :查找方括号之间的任何字符。</p>
+<p>2.[^abc]:查找任何不在方括号之间的字符。</p>
+<p>3.[0-9]:查找任何从 0 至 9 的数字。</p>
+<p>4.[a-z]:查找任何从小写 a 到小写 z 的字符。</p>
+<p>5.[A-z]:查找任何从大写 A 到小写 z 的字符。</p>
+</blockquote>
+<h2 id="正则方法">正则方法</h2><blockquote>
+<p>1.search：检索与正则表达式相匹配的值。</p>
+<p>2.match：找到一个或多个正则表达式的匹配。基本需要配合g</p>
+<p>3.replace：替换与正则表达式匹配的子串。</p>
+<p>4.test:判断正则是否匹配字符串，返回true和false.</p>
+</blockquote>
+<h2 id="量数">量数</h2><blockquote>
+<p>1.n+  :匹配任何包含至少一个 n 的字符串。</p>
+<p>2.n*:匹配任何包含零个或多个 n 的字符串。</p>
+<p>3.n?:匹配任何包含零个或一个 n 的字符串。</p>
+<p>4.n{X}:匹配包含 X 个 n 的序列的字符串。</p>
+<p>5.n{X,Y}:匹配包含 X 或 Y 个 n 的序列的字符串。</p>
+</blockquote>
+<h2 id="小练习">小练习</h2><blockquote>
+<p>1.邮箱</p>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"dfsfsd@qq.com.cn.org"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /^\w+@[0-9a-z]+(\.[a-z]+){1,3}$/;
+alert(<span class="keyword">reg</span>.<span class="keyword">test</span>(str));
+</code></pre><p>#未完，待续！！！！</p>
+<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt=""></p>
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/07/php初学/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php初学</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/07/php初学/" class="archive-article-date">
-  	<time datetime="2016-03-07T12:46:52.000Z" itemprop="datePublished">3月 7</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/07/php初学/">php初学</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/03/jQuery的一些选择器用法/" class="archive-article-date">
-  	<time datetime="2016-03-03T01:02:06.000Z" itemprop="datePublished">3月 3</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/03/jQuery的一些选择器用法/">jQuery的一些选择器用法</a>
-    </h1>
-  
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/01/基本数据类型转换/" class="archive-article-date">
-  	<time datetime="2016-03-01T09:32:56.000Z" itemprop="datePublished">3月 1</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/01/基本数据类型转换/">基本数据类型转换</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="正则" data-title="正则" data-url="http://yoursite.com/2016/03/08/正则/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/26/css回顾/" class="archive-article-date">
-  	<time datetime="2016-02-26T01:30:48.000Z" itemprop="datePublished">2月 26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/26/css回顾/">css回顾</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/25/html总结/" class="archive-article-date">
-  	<time datetime="2016-02-25T07:47:15.000Z" itemprop="datePublished">2月 25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/25/html总结/">html总结</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'quangege.github.io'; // required: replace example with your forum shortname
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 </div>
       <footer id="footer">
@@ -445,8 +496,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

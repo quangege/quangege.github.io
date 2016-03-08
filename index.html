@@ -244,6 +244,139 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-正则" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/08/正则/" class="article-date">
+  	<time datetime="2016-03-08T13:50:56.000Z" itemprop="datePublished">2016-03-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/08/正则/">正则</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>它是对字符串执行模式匹配的强大工具</em></p>
+<h2 id="元字符">元字符</h2><blockquote>
+<ol>
+<li><p><strong>.</strong> &nbsp;&nbsp;:查找单个字符，除了换行和行结束符</p>
+</li>
+<li><p>\w : 查找单词字符(数字、字母、下划线);</p>
+</li>
+</ol>
+</blockquote>
+<pre><code>var str = <span class="string">" ds23a sd@12_fsd  "</span>;
+<span class="built_in">console</span>.log(str.match(<span class="regexp">/\w+/g</span>));<span class="regexp">//</span>[<span class="string">"ds23a"</span>,<span class="string">"sd"</span>,<span class="string">"12_fsd"</span>]
+</code></pre><blockquote>
+<p>+表示匹配一个或多个在它前面的字符；最后加g表示在全局中寻找</p>
+<ol>
+<li>\d :查找数字</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">" ds23a sd@12_fsd  "</span>;
+console.<span class="literal">log</span>(str.<span class="literal">match</span>(/\<span class="keyword">d</span>+/<span class="keyword">g</span>));<span class="comment">//["23","12"]</span>
+</code></pre><blockquote>
+<ol>
+<li>\s :查找空白字符</li>
+</ol>
+</blockquote>
+<pre><code>var str = <span class="string">" ds23a   sd@12_fsd "</span>;
+<span class="built_in">console</span>.log(str.match(<span class="regexp">/\s+/g</span>));<span class="regexp">//</span>[<span class="string">" "</span>,<span class="string">"   "</span>,<span class="string">" "</span>]
+</code></pre><blockquote>
+<ol>
+<li>\b :匹配单词边界</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /\bsd\b/<span class="keyword">g</span>;
+console.<span class="literal">log</span>(str.<span class="literal">match</span>(<span class="keyword">reg</span>));<span class="comment">//["sd","sd"]</span>
+</code></pre><blockquote>
+<ol>
+<li><p>\n :查找换行符</p>
+</li>
+<li><p>\u :匹配汉字</p>
+</li>
+<li><p>n$ :匹配任何结尾为n的字符串</p>
+</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /<span class="keyword">d</span>$/;
+console.<span class="literal">log</span>(<span class="keyword">reg</span>.<span class="keyword">test</span>(str)));<span class="comment">//true</span>
+</code></pre><blockquote>
+<ol>
+<li>^n :匹配任何开头为n的字符串</li>
+</ol>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"sd dff dsd sd sdsd"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /^s/;
+console.<span class="literal">log</span>(<span class="keyword">reg</span>.<span class="keyword">test</span>(str)));<span class="comment">//true</span>
+</code></pre><h2 id="转义字符">转义字符</h2><blockquote>
+<p>1.[abc]   :查找方括号之间的任何字符。</p>
+<p>2.[^abc]:查找任何不在方括号之间的字符。</p>
+<p>3.[0-9]:查找任何从 0 至 9 的数字。</p>
+<p>4.[a-z]:查找任何从小写 a 到小写 z 的字符。</p>
+<p>5.[A-z]:查找任何从大写 A 到小写 z 的字符。</p>
+</blockquote>
+<h2 id="正则方法">正则方法</h2><blockquote>
+<p>1.search：检索与正则表达式相匹配的值。</p>
+<p>2.match：找到一个或多个正则表达式的匹配。基本需要配合g</p>
+<p>3.replace：替换与正则表达式匹配的子串。</p>
+<p>4.test:判断正则是否匹配字符串，返回true和false.</p>
+</blockquote>
+<h2 id="量数">量数</h2><blockquote>
+<p>1.n+  :匹配任何包含至少一个 n 的字符串。</p>
+<p>2.n*:匹配任何包含零个或多个 n 的字符串。</p>
+<p>3.n?:匹配任何包含零个或一个 n 的字符串。</p>
+<p>4.n{X}:匹配包含 X 个 n 的序列的字符串。</p>
+<p>5.n{X,Y}:匹配包含 X 或 Y 个 n 的序列的字符串。</p>
+</blockquote>
+<h2 id="小练习">小练习</h2><blockquote>
+<p>1.邮箱</p>
+</blockquote>
+<pre><code><span class="keyword">var</span> str = <span class="string">"dfsfsd@qq.com.cn.org"</span>;
+<span class="keyword">var</span> <span class="keyword">reg</span> = /^\w+@[0-9a-z]+(\.[a-z]+){1,3}$/;
+alert(<span class="keyword">reg</span>.<span class="keyword">test</span>(str));
+</code></pre><p>#未完，待续！！！！</p>
+<p><img src="http://7xoo7c.com1.z0.glb.clouddn.com/heihei.jpg" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-php初学" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -742,60 +875,6 @@ console.<span class="built_in">log</span>(<span class="built_in">str</span>);
       
         <p class="article-more-link">
           <a  href="/2015/11/26/关于JS/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-关于html与css" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/26/关于html与css/" class="article-date">
-  	<time datetime="2015-11-26T01:13:06.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/关于html与css/">关于html与css</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="复习一下之前学的html与css">复习一下之前学的html与css</h2><p><strong>1.html的基本格式</strong><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/26/关于html与css/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
